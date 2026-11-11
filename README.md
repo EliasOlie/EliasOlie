@@ -21,10 +21,11 @@ First dedicated engineer at a retail & wholesale food distribution group in nort
 | Project | What it shows |
 |---|---|
 | [**readonly-sql-mcp**](https://github.com/EliasOlie/readonly-sql-mcp) | Give agents SQL access without a way to break anything: AST guard, forced pagination, scoped auth, hash-chained audit log. Python, REST + MCP, CI. |
+| [**agyh**](https://github.com/EliasOlie/agyh) | One searchable index of every coding-agent session (Antigravity, Claude Code, Codex): projects, resume, TUI, and approvals of risky commands from Telegram/WhatsApp, where the first answer wins. Go, SQLite FTS5. |
+| [**edge-webhook-relay**](https://github.com/EliasOlie/edge-webhook-relay) | Verify, de-duplicate and reliably deliver webhooks (WhatsApp Cloud API, Stripe, GitHub) at the edge: Durable Objects, Queues + DLQ, D1 audit trail, replay API. TypeScript, Cloudflare Workers. |
 | [**mcp-platform-go**](https://github.com/EliasOlie/mcp-platform-go) | Ed25519 identity service + a unified MCP gateway where agents only *see* the tools their scopes allow + hybrid RAG (pgvector HNSW + full-text search + RRF). Go. |
 | [**vpsql-control-plane**](https://github.com/EliasOlie/vpsql-control-plane) | Single-node Postgres control plane: multi-tenant provisioning, least-privilege roles, PgBouncer, Go CLI, Next.js dashboard, OpenAI-compatible AI gateway. |
-| [**cozy-curses**](https://github.com/EliasOlie/cozy-curses) | For fun: a Rust + Bevy game (wasm-first), with sprites generated from JSON by a CLI I wrote. |
-| [**eleicoes-ipst**](https://github.com/EliasOlie/eleicoes-ipst) | Election app for a local church community. TypeScript. |
+| [**cozy-curses**](https://github.com/EliasOlie/cozy-curses) · [**eleicoes-ipst**](https://github.com/EliasOlie/eleicoes-ipst) | For fun and for my community: a Rust + Bevy game, and an election app for a local church. |
 
 ### Principles I build by
 
@@ -35,7 +36,7 @@ First dedicated engineer at a retail & wholesale food distribution group in nort
 
 ### Stack
 
-`TypeScript` `Bun` `Hono` `Next.js` · `Python` `FastAPI` · `Go` `Fiber` · `Rust` `Bevy` · `C` `Zig` · `PostgreSQL` `pgvector` `Redis` `BullMQ` `Oracle` · `MCP` `Claude API` `WhatsApp Cloud API` · `Docker` `Coolify` `Caddy` `Cloudflare Workers` `Prometheus` `Loki` `Grafana`
+`TypeScript` `Bun` `Hono` `Next.js` · `Python` `FastAPI` · `Go` `Fiber` `Bubble Tea` · `Rust` `Bevy` · `C` `Zig` · `PostgreSQL` `pgvector` `SQLite FTS5` `Redis` `BullMQ` `Oracle` · `MCP` `Claude API` `WhatsApp Cloud API` · `Docker` `Coolify` `Caddy` `Cloudflare Workers` `Durable Objects` `Queues` `D1` `Prometheus` `Loki` `Grafana`
 
 ### Contact
 
