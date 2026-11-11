@@ -1,17 +1,49 @@
-<h1 align="center">Olá 👋, me chamo Elias</h1>
-<h3 align="center">Desenvolvedor Python, fullstack (Sempre em desenvolvimento)</h3>
+## Hi, I'm Elias 👋
 
-- 🔭 Atualmente estou trabalhando com [NLP](https://github.com/EliasOlie/NLP-Brasil)
+**Senior Software Engineer · AI agents (MCP, RAG) · Legacy ERP integration · Payments**
+TypeScript · Python · Go · Rust — Pernambuco, Brazil 🇧🇷 · open to remote work (US/EU time zones)
 
-- 🌱 Estou aprendendo **CI/CD, TDD, Design, IA, SaaS**
+I build the parts that let AI agents work safely inside real businesses: identity and permissions, read-only gateways over legacy databases, idempotent queues, and an audit trail for everything they do.
 
-- 📫 Email **contato.eliasolie@gmail.com**
+### What I'm doing now
 
-<h3 align="left">Onde me encontrar:</h3>
-<p align="left">
-<a href="https://twitter.com/eliasolie" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="eliasolie" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/eliasolie" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="eliasolie" height="30" width="40" /></a>
-</p>
+First dedicated engineer at a retail & wholesale food distribution group in northeast Brazil, reporting to the board. In 5 months I replaced a low-code stack with **12 in-house components running in production**:
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg" alt="django" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://kafka.apache.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="kafka" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
+- **Central identity service**: refresh-token reuse detection, Argon2, rate limiting. Each consuming service decides authorization itself, never the identity layer.
+- **Read-only gateway over a legacy Oracle ERP**, exposed as REST + MCP, with SQL validated at the AST level (sqlglot) and pagination enforced on every query.
+- **Pix (instant payments) at every checkout**: a DLL proxy in pure C (WinINet, built with Zig) attached to the POS, plus a payments microservice with mTLS, webhooks and idempotent refunds.
+- **Knowledge base for agents** (MCP + pgvector), where every fact records its source, when it was valid and when to re-check it, with an append-only audit log.
+- **WhatsApp operations assistant on Claude**: tool use with a double permission check against prompt injection, and proactive monitors.
+- **Self-hosted platform**: Coolify, Caddy, CI/CD with rollback by tag, Prometheus/Loki/Grafana, 450+ automated tests.
+
+### Open-source versions of that work
+
+| Project | What it shows |
+|---|---|
+| [**readonly-sql-mcp**](https://github.com/EliasOlie/readonly-sql-mcp) | Give agents SQL access without a way to break anything: AST guard, forced pagination, scoped auth, hash-chained audit log. Python, REST + MCP, CI. |
+| [**mcp-platform-go**](https://github.com/EliasOlie/mcp-platform-go) | Ed25519 identity service + a unified MCP gateway where agents only *see* the tools their scopes allow + hybrid RAG (pgvector HNSW + full-text search + RRF). Go. |
+| [**vpsql-control-plane**](https://github.com/EliasOlie/vpsql-control-plane) | Single-node Postgres control plane: multi-tenant provisioning, least-privilege roles, PgBouncer, Go CLI, Next.js dashboard, OpenAI-compatible AI gateway. |
+| [**cozy-curses**](https://github.com/EliasOlie/cozy-curses) | For fun: a Rust + Bevy game (wasm-first), with sprites generated from JSON by a CLI I wrote. |
+| [**eleicoes-ipst**](https://github.com/EliasOlie/eleicoes-ipst) | Election app for a local church community. TypeScript. |
+
+### Principles I build by
+
+- **Agents should never see a tool they can't use**, so a prompt injection has nothing to call.
+- **Identity is central, authorization is local.**
+- **Every write is idempotent, and every agent action leaves a trace.**
+- **Read-only first** when touching systems the business can't afford to lose.
+
+### Stack
+
+`TypeScript` `Bun` `Hono` `Next.js` · `Python` `FastAPI` · `Go` `Fiber` · `Rust` `Bevy` · `C` `Zig` · `PostgreSQL` `pgvector` `Redis` `BullMQ` `Oracle` · `MCP` `Claude API` `WhatsApp Cloud API` · `Docker` `Coolify` `Caddy` `Cloudflare Workers` `Prometheus` `Loki` `Grafana`
+
+### Contact
+
+[LinkedIn](https://linkedin.com/in/eliasolie) · contato.eliasolie@gmail.com
+
+<details>
+<summary>🇧🇷 Em português</summary>
+
+Engenheiro de software sênior em Pernambuco. Construo a infraestrutura que permite que agentes de IA trabalhem com segurança dentro de empresas reais: identidade e permissões centralizadas, gateways somente leitura sobre ERPs legados (Oracle), filas idempotentes, Pix no PDV e assistentes no WhatsApp com Claude. Hoje sou o primeiro engenheiro dedicado de um grupo de varejo e atacado no interior do Nordeste. Aberto a vagas remotas no Brasil e no exterior.
+
+</details>
